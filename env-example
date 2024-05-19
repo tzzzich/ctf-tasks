@@ -1,0 +1,2 @@
+FLAG_SQL="HITS{sql_injection_success}"
+FLAG_XSS="HITS{xss_success}"
