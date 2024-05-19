@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
 const session = require('express-session');
-
+const db = require('./database')
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -45,7 +45,7 @@ app.get('/comments', (req, res) => {
     if (!req.session.comments) {
         req.session.comments = [];
     }
-    res.render('comments', { comments: req.session.comments, flag: process.env.FLAG_XSS || 'FLAG{x-S-s_s--UuU--c-CesS}' });
+    res.render('comments', { comments: req.session.comments, flag:btoa(process.env.FLAG_XSS || 'FLAG{xss_success}') });
 });
 
 app.post('/comments', (req, res) => {

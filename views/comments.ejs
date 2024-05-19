@@ -85,7 +85,18 @@
     </style>
 </head>
 <body>
-    <h2><div id="flag">XSS Flag: <%= flag %></div></h2>
+    <h2>
+        <div id="flag-container" style="display:none;"></div>
+    </h2>
+    <script>
+        const encodedFlag = '<%= flag %>';
+        
+        function revealFlag() {
+            const flag = atob(encodedFlag);
+            document.getElementById('flag-container').innerText = flag;
+            document.getElementById('flag-container').style.display = 'block';
+        }
+    </script>
 
     <h1>Comments</h1>
     <form action="/comments" method="post">

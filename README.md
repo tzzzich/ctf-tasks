@@ -74,7 +74,7 @@
 
 Перейдите на страницу комментариев (http://localhost:3001/comments).
 Введите следующий текст в поле комментария:
-<script>document.getElementById('flag').style.display='block';</script>
+<script>revealFlag();</script>
 Нажмите "Submit".
 
 - Лицензия MIT
