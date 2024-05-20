@@ -12,8 +12,8 @@
 
 1. Склонируйте репозиторий:
     ```bash
-    git clone https://github.com/alvytsk/ctf-sql-injection
-    cd ctf-sql-injection
+    git clone https://github.com/
+    cd ctf-tasks
     ```
 
 2. Установите зависимости:
